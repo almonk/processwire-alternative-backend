@@ -1,0 +1,3 @@
+[submodule "gitblog"]
+	path = gitblog
+	url = https://github.com/rsms/gitblog.git

@@ -1,0 +1,12 @@
+# general
+*~
+*.old
+*.swp
+
+# mac specific
+.DS_Store
+* copy.*
+._*
+
+# gitblog specific
+/data/site.json
