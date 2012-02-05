@@ -31,7 +31,7 @@
             <ul class="nav">
               <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><?=anchor('login/logout','Log out')?></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

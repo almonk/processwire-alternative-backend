@@ -29,5 +29,14 @@ class Login extends CI_Controller {
 	    }
 	    
 	}
+	
+	public function logout()
+	{
+	    include("../index.php");
+	    wire('session')->logout();
+	    
+	    $this->session->set_flashdata('success', 'Logged out successfully');
+        redirect('login');
+	}
 
 }
