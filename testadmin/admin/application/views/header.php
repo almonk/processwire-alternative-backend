@@ -37,5 +37,21 @@
         </div>
       </div>
     </div>
+    
+    <? if ($this->session->flashdata('error')):?>
+        <div class="container">
+            <div class="alert alert-error">
+                <?=$this->session->flashdata('error')?>
+            </div>
+        </div>
+    <? endif; ?>
+    
+    <? if ($this->session->flashdata('success')):?>
+        <div class="container">
+            <div class="alert alert-success">
+                <?=$this->session->flashdata('success')?>
+            </div>
+        </div>
+    <? endif; ?>
 
     <div class="container">

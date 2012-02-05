@@ -6,9 +6,9 @@ class Login extends CI_Controller {
 	{
         include("../index.php");
         $this->load->helper('form');
-        
+
         if (wire('user')->isLoggedin()) {
-            echo 'Logged in';
+            redirect('dashboard');
         }else{
             $this->load->view('login');
         }
@@ -17,12 +17,15 @@ class Login extends CI_Controller {
 	public function send()
 	{
         include("../index.php");
+        
 	    $username = $this->input->post('username');
 	    $password = $this->input->post('password');
+	    
 	    if (wire('session')->login($username, $password)) {
-            echo 'Succesful';
+            redirect('dashboard');
 	    }else{
-	        echo 'Not succesful';
+	        $this->session->set_flashdata('error', 'Incorrect login');
+	        redirect('login');
 	    }
 	    
 	}
