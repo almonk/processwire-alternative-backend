@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 	    if (wire('session')->login($username, $password)) {
             redirect('dashboard');
 	    }else{
-	        $this->session->set_flashdata('error', 'Incorrect login');
+	        $this->session->set_flashdata('error', '<b>Incorrect login</b>');
 	        redirect('login');
 	    }
 	    
@@ -35,7 +35,7 @@ class Login extends CI_Controller {
 	    include("../index.php");
 	    wire('session')->logout();
 	    
-	    $this->session->set_flashdata('success', 'Logged out successfully');
+	    $this->session->set_flashdata('success', '<b>Logged out successfully</b>');
         redirect('login');
 	}
 

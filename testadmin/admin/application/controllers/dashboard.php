@@ -6,5 +6,12 @@ class Dashboard extends CI_Controller {
 	{
         $this->load->view('dashboard');
 	}
+	
+	
+	public function test()
+	{
+	    $this->load->view('new');
+	}
+	
 
 }

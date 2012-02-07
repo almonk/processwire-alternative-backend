@@ -1,6 +1,13 @@
 <? $this->load->view('header') ?>
-
-    <h1>Homepage</h1>
-    <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+    
+    <div class="row-fluid">
+        <div class="span10">
+            <h1>Projects</h1>
+        </div>
+        
+        <div class="span2">
+            <a class="btn btn-large" href="#">New project</a>
+        </div>
+    </div>
     
 <? $this->load->view('footer') ?>
